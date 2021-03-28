@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <!--UN-COMMENT THIS meta tag and use with one of the two below if building a responsive email.
+        This will show email to scale when reviewed online on a mobile device -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!--<meta http-equiv="Content-Type" content="text/html; charset=ISO-8895-1" /> -->
+    <!-- SWITCH to THIS meta to catch any unconverted special characters-->
+    <meta name="format-detection" content="telephone=no" />
+    <!-- uncomment for mobile safari to  not auto detect phone numbers and create a link -->
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge" />-->
+    <!-- Windows Phone 8 MC support-->
+
+    <title>JOB NUMBER - HTML Email Title</title>
+
+    <style type="text/css">
+
+        /****** BUG FIXES DO NOT TOUCH  ********/
+
+        /* Forces Hotmail to display emails at full width */
+        .ExternalClass       { width:100%; }
+        /* Forces Hotmail to display normal line spacing*/
+        .ExternalClass,
+        .ExternalClass p,
+        .ExternalClass span,
+        .ExternalClass font,
+        .ExternalClass td,
+        .ExternalClass div      { line-height: 100%; }
+
+        /* Prevents Webkit and Windows Mobile platforms from changing default font sizes. */
+        body                    {
+            -webkit-text-size-adjust:none;
+            -ms-text-size-adjust:none;
+        }
+
+        /* Resets all body margins and padding to 0 */
+        body                    { margin:0; padding:0; }
+
+
+        /*Resolves Outlook 07/10 and Gmail td padding*/
+        table td                { border-collapse:collapse; }
+
+        /****** END BUG FIXES ********/
+
+
+
+
+
+        /****** RESETTING DEFAULTS********/
+
+        /* This sets a clean slate for all clients EXCEPT Gmail. But avoid using P tags*/
+        p                       {
+            margin:0;
+            padding:0;
+            margin-bottom:0;
+        }
+
+        /* Overwrites Hotmails default css*/
+        h1, h2, h3, h4, h5, h6  {
+            color: black;
+            line-height: 100%;
+        }
+
+
+        /*Fixes Firefox bolding */
+        strong, b {
+            font-weight: bold;
+        }
+
+
+        /*Breaking Long URLs */
+        .no-break{
+            -ms-word-break: break-all;
+            word-break: break-word;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+
+            /*Optional- adding hyphen to those breaks
+            -webkit-hyphens: auto;
+            -ms-hyphens: auto;
+            -moz-hyphens: auto;
+            hyphens: auto;   */
+            /*word-break: break-all; <-- Use with caution */
+
+
+        }
+
+        <!-- sup { line-height: 0; font-size: 75%; } -->
+        sup { line-height: 0; font-size: 65%; }
+        /*
+           Embedded CSS link color.  Overwrites Hotmail and Yahoo Beta's embedded link colors.
+           Dev NEEDS TO UPDATE THIS COLOR PER PROJECT!!
+       */
+        a, a:link {
+            color:{{LINKCOL}};
+            text-decoration: underline;
+        }
+
+
+        /*Fixes Outlook blue lines */
+        href>a {text-decoration: none; }
+
+
+        /****** END RESETTING DEFAULTS ********/
+
+
+
+
+
+        /****** EDITABLE STYLES  ********/
+
+        body, #body_style       {
+            margin: 0 auto;
+            background:{{BGNDCOL}};
+            min-height:1000px;
+            color:#818286;
+            font-family:Arial, Helvetica, sans-serif;
+            line-height:15px;font-size:13px;
+        }
+
+        /*Destroys Yahoo shortcuts */
+        span.yshortcuts         {
+            color:{{LINKCOL}};
+            background-color:none;
+            border:none;
+        }
+
+        span.yshortcuts:hover,
+        span.yshortcuts:active,
+        span.yshortcuts:focus   {
+            color:{{LINKCOL}};
+            background-color:none;
+            border:none;
+        }
+
+        /*Put default link color here*/
+        a span                  { color:{{LINKCOL}}; }
+        /*a[class="bodyLink"]   {
+            color:#5b5b5b;
+            text-decoration:none;
+        }*/    /*If unable to "fix" gmail or other email clients from wrapping phone numbers, unlinked websites, email addresses, add this class to the anchor tags and customize color and other styles accordingly */
+
+        /*Restyles blue phone numbers */
+        a[href^=tel]{ color:{{LINKCOL}}; text-decoration:none;}
+
+        a[x-apple-data-detectors] {
+            color: inherit !important;
+            text-decoration: none !important;
+            font-size: inherit !important;
+            font-family: inherit !important;
+            font-weight: inherit !important;
+            line-height: inherit !important;
+        }
+
+        /*Optimizing for mobile devices */
+
+        /*
+            @media only screen and (max-device-width: 599px)    {
+
+            table[class="table"],
+            td[class="cell"]    {
+                width: 100% !important;
+                /* part of the gmail-android fluid-image fix, make sure devices that recgonize media queries have no min-width */
+        /*        min-width:0 !important;
+            }
+
+            img[class="fluid"] {
+                width: 100% !important;
+                height: auto !important;
+            }
+
+            /*If swapping in a retina display or mobile-only images, use below example as a guide */
+        /*    td[class="imageSwap"] {
+                background-image:url(images/mobileimage.gif) !important;
+                background-size:260px 219px !important;
+                background-repeat: no-repeat !important;
+                width:260px !important;
+                height:219px !important;
+                display:block !important;}
+            td[class="desktopimage"] img{
+                display:none !important;
+            }
+
+        }*/
+
+        /*** END EDITABLE STYLES ***/
+
+    </style><!--end style-->
+
+    <!--[if gte mso 9]>
+    <style type="text/css">
+        sup { font-size: 100% !important; }
+    </style>
+    <![endif]-->
+
+    <!--[if gt mso 15]>
+    <style type="text/css" media="all">
+        /* Outlook 2016 Height Fix */
+        table, tr, td {border-collapse: collapse;}
+        tr { font-size:0px; line-height:0px; border-collapse: collapse; }
+    </style>
+    <![endif]-->
+
+    <!--[if (gte mso 9)|(IE)]>
+    <style type="text/css">
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            mso-line-height-rule: exactly;
+            mso-margin-bottom-alt: 0;
+            mso-margin-top-alt: 0;
+            mso-table-lspace: 0pt; mso-table-rspace: 0pt;}
+    </style>
+    <![endif]-->
+
+</head>
+<body topmargin="0" bottommargin="0" leftmargin="0" rightmargin="0" marginheight="0" marginwidth="0" style="padding:0; margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:100%;background-color:{{BGNDCOL}};min-height:1000px;" bgcolor="{{BGNDCOL}}">
+
+<!--Preheader-->
+<!--<style type="text/css">
+    div.preheader
+    { display: none !important; }
+</style>
+<div class="preheader" style="font-size:1px;color:{{BGNDCOL}};display:none !important;">Preheader text here</div>-->
+
+<div id="body_style" style="padding:0px;margin:0px;" bgcolor="{{BGNDCOL}}"><table cellpadding="0" cellspacing="0" border="0" style="border-spacing:0;mso-line-height-rule: exactly;mso-margin-bottom-alt:0;mso-margin-top-alt:0;mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border:0;margin:0;padding:0;" bgcolor="{{BGNDCOL}}" width="100%"><tr><td align="center" valign="top"><table cellpadding="0" cellspacing="0" border="0" style="border-spacing: 0; mso-line-height-rule:exactly;mso-margin-bottom-alt:0;mso-margin-top-alt:0;mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border:0;margin:0;padding:0;" bgcolor="{{BGNDCOL}}" width="{{MAX_WIDTH}}">
+<!-- PARTIALS -->
+
+<!-- END: PARTIALS -->
+</table></td></tr></table></div></body></html>
